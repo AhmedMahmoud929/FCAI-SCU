@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FCAI SCU</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer"
+    />
+    <link rel="shortcut icon" type="image/x-icon" href="/smallLogo.png">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+</head>
+
+<body>
+
+    <!-- start [NAV] -->
+    <nav id="navo">
+        <div class="container">
+
+            <div class="right">
+
+                <div class="menu" id="menuBtn">
+                    <div class="up"></div>
+                    <div class="middle"></div>
+                    <div class="bottom"></div>
+                </div>
+                <a href="#"><img src="./logo.png" class="logo"></a>
+            </div>
+            <div class="left">
+                <a href="./errorPage.html" target="blank"> <img src="./login.png" class="login"></a>
+                <a href="./errorPage.html" target="blank"> <img src="./signup.png" class="signup"></a>
+
+            </div>
+        </div>
+    </nav>
+
+    <div id="menuList">
+        <div class="container">
+            <a class="lnk" href="#" class="activeA">الرئيسية</a>
+            <a class="lnk" href="./errorPage.html" target="blank">عن الكلية</a>
+            <a class="lnk" href="./errorPage.html" target="blank">إدارة الكلية</a>
+            <a class="lnk" href="./errorPage.html" target="blank">هيئة التدريس</a>
+            <a class="lnk" href="./errorPage.html" target="blank">الطلاب</a>
+            <a class="lnk" href="#secs">الأقسام</a>
+            <a class="lnk" href="#contact">تواصل معنا</a>
+        </div>
+    </div>
+    <!-- end [NAV] -->
+
+
+
+
+    <!-- start [HOME] -->
+    <section id="home">
+        <div class="container">
+            <div class="top">
+                <div class="right">
+                    <h1>أهلاً و سهلاً بك في موقع</h1>
+                    <h2>كلية الحاسبات و الذكاء الإصطناعي</h2>
+                    <h3>جامعة مدينة السادات</h3>
+                </div>
+                <div class="left">
+                    <div class="image">
+                        <img src="./csImg.png" id="homeImg">
+                    </div>
+                    <h1 id="homeText">Computer Science</h1>
+                </div>
+            </div>
+            <div class="down">
+                <a href="#news"><i class="fa-solid fa-angles-down"></i></a>
+            </div>
+        </div>
+    </section>
+    <!-- end [HOME] -->
+
+
+
+
+    <!-- start [NEWS] -->
+    <section id="news">
+        <div class="container">
+            <div class="title">أحدث الأخبار</div>
+            <div class="slider">
+                <div class="right">
+                    <div class="sl" id="0" onclick="changeByTitle(this.id)">أستقبال الطلاب الجدد للعام الجامعي 2022- 2023
+                    </div>
+                    <div class="sl" id="1" onclick="changeByTitle(this.id)">رئيس الجامعة يفتتح معرض الكتاب السنوي الرابع
+                    </div>
+                    <div class="sl" id="2" onclick="changeByTitle(this.id)">أنطلاق مارثون انتخابات إتحاد الطلبه للعام الجامعى 2022/2021
+                    </div>
+                    <div class="sl" id="3" onclick="changeByTitle(this.id)">رحلة علمية إلى معرض القاهرة الدولي للتكنولوجيا
+                    </div>
+
+
+                </div>
+                <div class="left">
+                    <div class="scenes">
+
+                        <img src="./smallLogo.png" class="logo">
+                        <img src="./slide1.png" alt="" class="slide" id="slideShow">
+
+                    </div>
+                    <div class="ctrl">
+                        <i class="fa-solid fa-caret-right" id="arrRight"></i>
+                        <div class="circles">
+                            <div class="as"></div>
+                            <div class="as"></div>
+                            <div class="as"></div>
+                            <div class="as"></div>
+                        </div>
+                        <i class="fa-solid fa-caret-left" id="arrLeft"></i>
+                    </div>
+                </div>
+            </div>
+            <!-- for mobile -->
+            <div class="sliderPhone">
+                <div class="main"> <img src="./slide1P.png" alt="">
+                    <div class="text">أستقبال الطلاب الجدد للعام الجامعي 2022- 2023
+                    </div>
+                </div>
+                <div class="ctrlPhone">
+                    <i class="fa-solid fa-caret-right" id="arrRightPhone" onclick="phoneRightArr(this.id)"></i>
+                    <div class="circlesPhone">
+                        <div class="asP" style="opacity: 1;"></div>
+                        <div class="asP"></div>
+                        <div class="asP"></div>
+                        <div class="asP"></div>
+                    </div>
+                    <i class="fa-solid fa-caret-left" id="arrLeftPhone" onclick="phoneLeftArr(this.id)"></i>
+                </div>
+            </div>
+
+        </div>
+    </section>
+    <!-- end [NEWS] -->
+
+
+
+
+    <!-- start [SECS] -->
+    <section id="secs">
+        <div class="container">
+            <div class="title">أقسام الكلية</div>
+
+            <div class="boxes">
+
+
+                <!-- CS -->
+                <div class="box boxCs" data-aos="fade-up" data-aos-offset="100" data-aos-duration="600">
+                    <img src="./binary-code.png">
+                    <div class="name">
+                        Computer<br>Science
+                    </div>
+                    <div class="describe">
+                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nihil dicta repellat exercitationem!
+                    </div>
+                    <a class="btn" href="./errorPage.html" target="blank">
+
+                        <i class="fa-solid fa-arrow-right"></i> CS
+
+                    </a>
+                </div>
+                <!-- IS -->
+                <div class="box boxIs" data-aos="fade-up" data-aos-offset="100" data-aos-duration="600">
+                    <img src="./server.png">
+                    <div class="name">
+                        Information<br>System
+                    </div>
+                    <div class="describe">
+                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nihil dicta repellat exercitationem!
+                    </div>
+                    <a class="btn" href="./errorPage.html" target="blank">
+
+                        <i class="fa-solid fa-arrow-right"></i> IS
+
+                    </a>
+                </div>
+                <!-- BIO -->
+                <div class="box boxBio" data-aos="fade-up" data-aos-offset="100" data-aos-duration="600">
+                    <img src="./data-science.png">
+                    <div class="name">
+                        Bioinformatics
+                    </div>
+                    <div class="describe">
+                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nihil dicta repellat exercitationem!
+                    </div>
+                    <a class="btn" href="./errorPage.html" target="blank">
+
+                        <i class="fa-solid fa-arrow-right"></i> BIO
+
+                    </a>
+                </div>
+                <!-- AI -->
+                <div class="box boxAi" data-aos="fade-up" data-aos-offset="100" data-aos-duration="600">
+                    <img src="./artificial-intelligence.png">
+                    <div class="name">
+                        Artificial<br>Intelligence
+                    </div>
+                    <div class="describe">
+                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nihil dicta repellat exercitationem!
+                    </div>
+                    <a class="btn" href="./errorPage.html" target="blank">
+
+                        <i class="fa-solid fa-arrow-right"></i> AI
+
+                    </a>
+                </div>
+            </div>
+
+        </div>
+    </section>
+    <!-- end [SECS] -->
+
+
+
+    <!-- start [contact] -->
+    <section id="contact">
+        <div class="container">
+            <div class="title">تواصل معنا</div>
+            <div class="main">
+
+                <form>
+                    <div class="inputs">
+                        <i class="fa-solid fa-circle-xmark closeQsPop"></i>
+                        <textarea class="qsInpPop" placeholder="إستفسارك .."></textarea>
+                        <input type="text" class="textInp" placeholder="إسمك الأول" required>
+                        <input type="text" class="textInp" placeholder="إسمك الثاني" required>
+                        <input type="email" class="textInp" placeholder="بريدك الإلكتروني" required>
+                        <div class="qsInp">إستفسارك ..</div>
+                    </div>
+                    <button>إرسال</button>
+                </form>
+                <!-- <img class="pic" src="./email.png"> -->
+            </div>
+        </div>
+    </section>
+    <!-- end [contact] -->
+
+
+
+
+    <!-- start [footer] -->
+    <footer>
+        <div class="contain">
+            <div class="right">
+                <img src="./logo.png" class="top">
+                <div class="bottom">تلتزم جامعة مدينة السادات بإعداد خريج متميز قادر<br> علي المنافسة و الإبتكار و بإنتاج أبحاث علمية<br> وتطبيقية مبتكرة في مجال الحوسبة و الذكاء الإصطناعي
+                </div>
+            </div>
+            <div class="left">
+                <div class="top">
+                    <i class="fa-solid fa-location-dot"></i>
+                    <div class="text">
+                        مدينة السادات - المنطقة الخامسة<br> بجوار مول الزهور
+                    </div>
+                </div>
+                <div class="bottom">
+                    <i class="fa-solid fa-phone-flip"></i>
+                    <div class="nums">
+                        <div>20123456789+</div>
+                        <div>20123456789+</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- end [footer] -->
+
+
+
+    <!-- start [me] -->
+    <div id="me">
+        <a href="https://www.facebook.com/profile.php?id=100028876007672" target="blank">AhmedMahmoud929</a> Made with love by
+    </div>
+    <!-- end [me] -->
+
+
+    <script src="./main.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+</body>
+
+</html>
